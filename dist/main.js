@@ -1,1 +1,1 @@
-console.log("test");
+document.body.innerHTML='\n  <div class="underline bg-black text-white text-4xl">\n    tailwind test\n  </div>\n';
