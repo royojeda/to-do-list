@@ -1,5 +1,9 @@
-document.body.innerHTML = `
-  <div class="underline bg-black text-blue-600 text-4xl font-extralight">
-    tailwind test
-  </div>
-`
+class Project {
+  constructor(name) {
+    this.name = name;
+    this.tasks = [];
+  }
+}
+
+const defaultProject = new Project('Default Project');
+console.log(defaultProject.name, defaultProject.tasks);
