@@ -11,7 +11,6 @@ newToDoList.createTask(
     projectId: 0
   }
 );
-console.table(newToDoList.tasks[0]);
 
 newToDoList.updateTask(0,
   {
@@ -22,7 +21,9 @@ newToDoList.updateTask(0,
     projectId: 0
   }
 );
-console.table(newToDoList.tasks[0]);
 
 newToDoList.toggleTaskStatus(0);
-console.table(newToDoList.tasks[0]);
+
+console.log(newToDoList.tasks[0]);
+newToDoList.deleteTask(0);
+console.log(newToDoList.tasks[0]);

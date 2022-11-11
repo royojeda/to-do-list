@@ -21,6 +21,10 @@ export class ToDoList {
     this.tasks.find(task => task.id === taskId).toggleStatus();
   }
 
+  deleteTask(taskId) {
+    this.tasks = this.tasks.filter(task => task.id !== taskId);
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }
