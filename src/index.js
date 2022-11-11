@@ -12,9 +12,8 @@ newToDoList.createTask(
   }
 );
 
-newToDoList.updateProject(0,
-  {
-    title: 'new project title'
-  }
-);
-console.table(newToDoList.tasks[0]);
+console.log(newToDoList.projects);
+console.log(newToDoList.tasks);
+newToDoList.deleteProject(0);
+console.log(newToDoList.projects);
+console.log(newToDoList.tasks);

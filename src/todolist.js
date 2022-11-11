@@ -34,6 +34,11 @@ export class ToDoList {
       .update(projectDetails);
   }
 
+  deleteProject(projectId) {
+    this.projects = this.projects.filter(project => project.id !== projectId);
+    this.tasks = this.tasks.filter(task => task.project.id !== projectId);
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }
