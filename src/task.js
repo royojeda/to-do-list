@@ -10,4 +10,12 @@ export class Task {
     this.project = project;
     this.isFinished = isFinished;
   }
+
+  update({ title, description, dueDate, priority, project }) {
+    this.title = title;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority = priority;
+    this.project = project;
+  }
 }

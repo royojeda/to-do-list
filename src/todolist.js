@@ -12,6 +12,11 @@ export class ToDoList {
     this.tasks.push(new Task(taskDetails));
   }
 
+  updateTask(taskId, { projectId, ...taskDetails }) {
+    taskDetails.project = this.#findProjectById(projectId);
+    this.tasks.find(task => task.id === taskId).update(taskDetails);
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }
