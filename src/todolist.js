@@ -14,11 +14,11 @@ export class ToDoList {
 
   updateTask(taskId, { projectId, ...taskDetails }) {
     taskDetails.project = this.#findProjectById(projectId);
-    this.tasks.find(task => task.id === taskId).update(taskDetails);
+    this.#findTaskById(taskId).update(taskDetails);
   }
 
   toggleTaskStatus(taskId) {
-    this.tasks.find(task => task.id === taskId).toggleStatus();
+    this.#findTaskById(taskId).toggleStatus();
   }
 
   deleteTask(taskId) {
@@ -40,5 +40,9 @@ export class ToDoList {
 
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
+  }
+
+  #findTaskById(taskId) {
+    return this.tasks.find(task => task.id === taskId);
   }
 }
