@@ -6,4 +6,13 @@ export class ToDoList {
     this.projects = projects;
     this.tasks = tasks;
   }
+
+  createTask({ projectId, ...taskDetails }) {
+    taskDetails.project = this.#findProjectById(projectId);
+    this.tasks.push(new Task(taskDetails));
+  }
+
+  #findProjectById(projectId) {
+    return this.projects.find(project => project.id === projectId);
+  }
 }
