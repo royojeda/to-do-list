@@ -17,6 +17,10 @@ export class ToDoList {
     this.tasks.find(task => task.id === taskId).update(taskDetails);
   }
 
+  toggleTaskStatus(taskId) {
+    this.tasks.find(task => task.id === taskId).toggleStatus();
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }

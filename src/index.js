@@ -23,3 +23,6 @@ newToDoList.updateTask(0,
   }
 );
 console.table(newToDoList.tasks[0]);
+
+newToDoList.toggleTaskStatus(0);
+console.table(newToDoList.tasks[0]);

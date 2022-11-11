@@ -18,4 +18,8 @@ export class Task {
     this.priority = priority;
     this.project = project;
   }
+
+  toggleStatus() {
+    this.isFinished = !this.isFinished;
+  }
 }
