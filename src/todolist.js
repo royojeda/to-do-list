@@ -25,6 +25,10 @@ export class ToDoList {
     this.tasks = this.tasks.filter(task => task.id !== taskId);
   }
 
+  createProject(projectDetails) {
+    this.projects.push(new Project(projectDetails));
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }
