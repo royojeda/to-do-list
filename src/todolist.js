@@ -30,8 +30,7 @@ export class ToDoList {
   }
 
   updateProject(projectId, projectDetails) {
-    this.projects.find(project => project.id === projectId)
-      .update(projectDetails);
+    this.#findProjectById(projectId).update(projectDetails);
   }
 
   deleteProject(projectId) {
