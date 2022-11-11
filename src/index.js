@@ -12,19 +12,9 @@ newToDoList.createTask(
   }
 );
 
-newToDoList.createProject(
+newToDoList.updateProject(0,
   {
-    title: 'test project title'
-  }
-);
-
-newToDoList.updateTask(0,
-  {
-    title: 'test title',
-    description: 'test description',
-    dueDate: new Date(),
-    priority: 1,
-    projectId: 1
+    title: 'new project title'
   }
 );
 console.table(newToDoList.tasks[0]);

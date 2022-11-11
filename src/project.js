@@ -5,4 +5,8 @@ export class Project {
     this.id = Project.nextId++;
     this.title = title;
   }
+
+  update({ title }) {
+    this.title = title;
+  }
 }
