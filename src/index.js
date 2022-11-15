@@ -1,6 +1,6 @@
-import { ToDoList } from './todolist.js'
+import { Logic } from './logic.js'
 
-const newToDoList = new ToDoList();
+const newToDoList = new Logic();
 
 newToDoList.createTask(
   {
