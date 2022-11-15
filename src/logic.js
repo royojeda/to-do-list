@@ -38,6 +38,10 @@ export class Logic {
     this.tasks = this.tasks.filter(task => task.project.id !== projectId);
   }
 
+  tasksIn(project) {
+    return this.tasks.filter(task => task.project === project);
+  }
+
   #findProjectById(projectId) {
     return this.projects.find(project => project.id === projectId);
   }
