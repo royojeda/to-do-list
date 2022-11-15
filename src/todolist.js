@@ -8,6 +8,6 @@ export class ToDoList {
   }
 
   setup() {
-
+    this.display.layoutPage();
   }
 }
