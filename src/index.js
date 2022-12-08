@@ -1,4 +1,7 @@
-import { ToDoList } from './todolist.js'
+import { Controller } from "./controller";
+import { Model } from "./model";
+import { View } from "./view";
 
-const newToDoList = new ToDoList();
-newToDoList.setup();
+// localStorage.clear();
+
+const app = new Controller({ model: new Model(), view: new View() });

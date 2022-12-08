@@ -1,22 +1,26 @@
 export class Task {
-  static nextId = 0;
+  static #nextId = 0;
 
-  constructor({ title, description, dueDate, priority, project, isFinished = false }) {
-    this.id = Task.nextId++;
+  static setNextId(value) {
+    this.#nextId = value;
+  }
+
+  constructor({ title, description, dueDate, priority, projectId, isFinished = false }) {
+    this.id = Task.#nextId++;
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.project = project;
+    this.projectId = projectId;
     this.isFinished = isFinished;
   }
 
-  update({ title, description, dueDate, priority, project }) {
+  update({ title, description, dueDate, priority, projectId }) {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.project = project;
+    this.projectId = projectId;
   }
 
   toggleStatus() {
